@@ -12,7 +12,7 @@ import { addAsyncAmount } from './counterActions';
         <div>
             <h1>{count}</h1>
 
-            <button onClick={() => dispatch(decrement())}>Decrementar</button>
+            <button aria-label="Decrement value" onClick={() => dispatch(decrement())}>Decrementar</button>
             <button onClick={() => dispatch(increment())}>Incrementar</button>
             <button onClick={()=> dispatch(increase(5))}>Incrementar +5</button>
             <div>

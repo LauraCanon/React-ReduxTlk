@@ -49,3 +49,19 @@ test('Reset "Number to 0', () => {
     const number = screen.getByText('0');
     expect(number).toBeInTheDocument();
 });
+
+test('should substract 1 when clicked decrement button', () => {
+    //Arrange
+    render(
+        <Provider store={store}>
+            <Counter />
+        </Provider>
+    );
+    //Act
+    const buttonDec = screen.getByLabelText("Decrement value");
+    userEvent.click(buttonDec);
+    //Asserts
+    const number = screen.getByText('-1');
+    expect(number).toBeInTheDocument();
+
+})
