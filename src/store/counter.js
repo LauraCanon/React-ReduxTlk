@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { increment, decrement, selectCount, increase, reset } from './counter-slice';
+import { addAsyncAmount } from './counterActions';
 
     export const Counter = () => {
     const dispatch = useDispatch();
@@ -17,6 +18,7 @@ import { increment, decrement, selectCount, increase, reset } from './counter-sl
             <div>
                 {/*<button onClick={() => dispatch(toogle)}>Toggle</button>*/}
                 <button onClick={() => dispatch(reset())}>Reset</button>
+                <button onClick={() => dispatch(addAsyncAmount())}>addAsync</button>
             </div>
         </div>
     )
